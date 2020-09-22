@@ -1,0 +1,54 @@
+.dice {
+  margin: auto;
+  width: 14rem;
+  padding: 0% 0 4% 0;
+}
+@media only screen and (max-width: 600px) {
+  .dice {
+    padding-top: 20px;
+  }
+}
+
+.dice h1 {
+  font-size: 13rem;
+  padding-bottom: 20px;
+  width: 14rem;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .dice h1 {
+    font-size: 5rem;
+  }
+}
+
+.dice button {
+  font-size: 3rem;
+  width: 14rem;
+}
+@media only screen and (max-width: 600px) {
+  .dice button {
+    font-size: 2rem;
+  }
+}
+.movie {
+  margin: auto;
+  width: auto;
+  text-align: center;
+}
+.movie h3 {
+  font-size: 3rem;
+}
+@media only screen and (max-width: 600px) {
+  .movie h3 {
+    font-size: 1.5rem;
+  }
+}
+.movie h2 {
+  color: purple;
+  font-size: 9rem;
+}
+@media only screen and (max-width: 600px) {
+  .movie h2 {
+    font-size: 4rem;
+  }
+}
