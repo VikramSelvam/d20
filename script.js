@@ -1,20 +1,25 @@
 let value = 0;
 let index = [
-  `Deadpool 2`,
-  `I Am Mother`,
-  `Baby Driver`,
-  `Lupin the 3rd`,
-  `Uncut gems`,
-  `Dope`,
-  `Selfless`,
-  `Kubo And The Two Strings`,
-  `Chicken Run`,
-  `Scott Pilgrim vs the world`,
-  `undefined`,
-  `A Silent Voice`,
-  `Kiki's delivery service`,
-  `The Platform`,
-  `Monty Python Life of Brian`,
+  `The Foreigner`
+  `The Two Popes`
+  `Marriage Story`
+  `The Lovebirds`
+  `Prince Of Egypt`
+  `Baby Driver`
+  `A Silent Voice`
+  `Kubo And The Two Strings`
+  `The Circle`
+  `Kiki's delivery service`
+  `I Am Mother`
+  `Uncut gems`
+  `The adventures of TinTin`
+  `Kung Fu Hustle`
+  `Dope`
+  `Scott Pilgrim vs the world`
+  `Deadpool 2`
+  `Lupin the 3rd`
+  `Selfless`
+  `Monty Python Life of Brian`
 ];
 
 let indexValue = Object.keys(index).map(function (key) {
