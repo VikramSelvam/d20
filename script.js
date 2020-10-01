@@ -1,5 +1,6 @@
 let value = 0;
-let index = [
+let nameList = "";
+let movieList = [
   `The Foreigner`,
   `The Two Popes`,
   `Marriage Story`,
@@ -19,15 +20,32 @@ let index = [
   `Deadpool 2`,
   `Lupin the 3rd`,
   `Selfless`,
-  `Monty Python Life of Brian`
+  `Monty Python Life of Brian`,
 ];
 
-let indexValue = Object.keys(index).map(function (key) {
-  return index[key];
+// Sidepanel
+function openNav() {
+  document.getElementById("mySidePanel").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidePanel").style.width = "0";
+}
+
+// Dice roll
+
+let indexValue = Object.keys(movieList).map(function (key) {
+  return movieList[key];
 });
 
 function roll() {
-  const value = Math.floor(Math.random() * 15) + 1;
+  const value = Math.floor(Math.random() * 20) + 1;
   document.getElementById("number").innerHTML = value;
   document.getElementById("movieName").innerHTML = indexValue[value - 1];
 }
+
+// List Array
+for (i = 0; i < movieList.length; i++) {
+  nameList += "<li>" + movieList[i] + "</li>";
+}
+document.getElementById("movieList").innerHTML = nameList;

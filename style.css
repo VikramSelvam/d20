@@ -52,3 +52,32 @@
     font-size: 4rem;
   }
 }
+
+/* SidePanel*/
+
+.sidePanel {
+  width: 0;
+  background-color: #343a40;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidePanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+/* sidePanel content */
+
+ol#movieList {
+  font-size: 1.2rem;
+  display: block;
+  transition: 0.3s;
+  position: fixed;
+}

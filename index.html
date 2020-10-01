@@ -13,16 +13,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="mx-auto dice">
-      <h1 id="number">0</h1>
-      <button onclick="roll()" type="button" class="btn btn-danger">
-        Roll
-      </button>
-    </div>
-    <div class="movie">
-      <h3>Today we are going to watch...</h3>
-      <h2 id="movieName">?</h2>
-    </div>
+
+<!--Navbar-->
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Taco Gods</a>
+  <button class="openbtn" onclick="openNav()">☰</button>  
+</nav>
+
+<div id="mySidePanel" class="sidePanel">
+  <a href="#" onclick="closeNav()" class="closebtn">×</a>
+  <ol id="movieList"></ol>
+
+</div>
+
+
+
+      <div id="page-content-wrapper">
+        <div class="mx-auto dice">
+          <h1 id="number">0</h1>
+          <button onclick="roll()" type="button" class="btn btn-danger">
+            Roll
+          </button>
+        </div>
+        <div class="movie">
+          <h3>Today we are going to watch...</h3>
+          <h2 id="movieName">?</h2>
+        </div>
+      </div> 
+  </div>
+
+
   </body>
   <script src="script.js"></script>
 </html>
