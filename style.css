@@ -56,14 +56,17 @@
 /* SidePanel*/
 
 .sidePanel {
-  width: 0;
   background-color: #343a40;
-  height: 100%;
-  position: fixed;
+  display: block;
+  width: 0;
   z-index: 1;
-  overflow-x: hidden;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  position: absolute;
+  clip: rect(auto, auto, auto, auto);
 }
 
 .sidePanel .closebtn {
@@ -71,13 +74,15 @@
   top: 0;
   right: 25px;
   font-size: 36px;
+  text-decoration: none;
 }
 
 /* sidePanel content */
 
-ol#movieList {
+.sidePanel ol {
+  padding: 8px 8px 8px 32px;
   font-size: 1.2rem;
-  display: block;
   transition: 0.3s;
+  color: #fff;
   position: fixed;
 }

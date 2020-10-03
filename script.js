@@ -1,51 +1,59 @@
-let value = 0;
-let nameList = "";
-let movieList = [
-  `The Foreigner`,
-  `The Two Popes`,
-  `Marriage Story`,
-  `The Lovebirds`,
-  `Prince Of Egypt`,
-  `Baby Driver`,
-  `A Silent Voice`,
-  `Kubo And The Two Strings`,
-  `The Circle`,
-  `Kiki's delivery service`,
-  `I Am Mother`,
-  `Uncut gems`,
-  `The adventures of TinTin`,
-  `Kung Fu Hustle`,
-  `Dope`,
-  `Scott Pilgrim vs the world`,
-  `Deadpool 2`,
-  `Lupin the 3rd`,
-  `Selfless`,
-  `Monty Python Life of Brian`,
+let movieObj = [
+  { title: `The Foreigner`, seen: true },
+  { title: `The Two Popes`, seen: true },
+  { title: `Marriage Story`, seen: true },
+  { title: `The Lovebirds`, seen: true },
+  { title: `Prince Of Egypt`, seen: true },
+  { title: `Baby Driver`, seen: true },
+  { title: `A Silent Voice`, seen: true },
+  { title: `Kubo And The Two Strings`, seen: true },
+  { title: `The Circle`, seen: true },
+  { title: `Kiki's delivery service`, seen: true },
+  { title: `I Am Mother`, seen: true },
+  { title: `Uncut gems`, seen: false },
+  { title: `The adventures of TinTin`, seen: false },
+  { title: `Kung Fu Hustle`, seen: true },
+  { title: `Dope`, seen: true },
+  { title: `Scott Pilgrim vs the world`, seen: false },
+  { title: `Deadpool 2`, seen: false },
+  { title: `Lupin the 3rd`, seen: true },
+  { title: `Selfless`, seen: false },
+  { title: `Monty Python Life of Brian`, seen: false },
 ];
+let nav = false;
 
 // Sidepanel
 function openNav() {
   document.getElementById("mySidePanel").style.width = "300px";
+  nav = true;
 }
 
 function closeNav() {
   document.getElementById("mySidePanel").style.width = "0";
+  nav = false;
 }
 
-// Dice roll
-
-let indexValue = Object.keys(movieList).map(function (key) {
-  return movieList[key];
-});
-
-function roll() {
-  const value = Math.floor(Math.random() * 20) + 1;
-  document.getElementById("number").innerHTML = value;
-  document.getElementById("movieName").innerHTML = indexValue[value - 1];
+function toggleNav() {
+  nav ? closeNav() : openNav();
 }
-
 // List Array
-for (i = 0; i < movieList.length; i++) {
-  nameList += "<li>" + movieList[i] + "</li>";
+
+let nameList = "";
+for (i = 0; i < movieObj.length; i++) {
+  nameList += "<li>" + movieObj[i].title + "</li>";
 }
 document.getElementById("movieList").innerHTML = nameList;
+
+function roll() {
+  var movieArray = Object.keys(movieObj);
+  var movieIndex = Math.floor(Math.random() * movieArray.length) + 1;
+  var randomKey = movieArray[movieIndex - 1];
+  document.getElementById("number").innerHTML = movieIndex;
+  document.getElementById("movieName").innerHTML = movieObj[randomKey].title;
+  if (movieObj[randomKey].seen == true) {
+    document.getElementById("movieName").style =
+      "text-decoration: line-through";
+  } else {
+    document.getElementById("movieName").style = "text-decoration: none";
+  }
+}
