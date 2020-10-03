@@ -14,7 +14,7 @@ let movieObj = [
   { title: `The adventures of TinTin`, seen: false },
   { title: `Kung Fu Hustle`, seen: true },
   { title: `Dope`, seen: true },
-  { title: `Scott Pilgrim vs the world`, seen: false },
+  { title: `Space Jam`, seen: false },
   { title: `Deadpool 2`, seen: false },
   { title: `Lupin the 3rd`, seen: true },
   { title: `Selfless`, seen: false },
