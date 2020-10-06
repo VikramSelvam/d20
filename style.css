@@ -53,7 +53,19 @@
   }
 }
 
+/* Toggle Random */
+#unseenOnly {
+  display: none;
+}
+
 /* SidePanel*/
+
+/* togle switch */
+.custom-control.custom-switch {
+  color: white;
+  margin-left: 15px;
+  font-size: 18px;
+}
 
 .sidePanel {
   background-color: #343a40;
@@ -64,9 +76,10 @@
   left: 0;
   overflow: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 20px;
   position: absolute;
-  clip: rect(auto, auto, auto, auto);
+  /* for when siddePanel ol is fized */
+  /* clip: rect(auto, auto, auto, auto); */
 }
 
 .sidePanel .closebtn {
@@ -84,5 +97,10 @@
   font-size: 1.2rem;
   transition: 0.3s;
   color: #fff;
-  position: fixed;
+  /* position: fixed; */
+}
+
+/* Unseen movie list */
+#movieListUnseen {
+  display: none;
 }

@@ -1,3 +1,5 @@
+let nameList = "";
+let unseenNamelist = "";
 let movieObj = [
   { title: `The Foreigner`, seen: true },
   { title: `The Two Popes`, seen: true },
@@ -36,21 +38,23 @@ function closeNav() {
 function toggleNav() {
   nav ? closeNav() : openNav();
 }
-// List objects
 
-let nameList = "";
+// List objects
 
 for (let movie of movieObj) {
   if (movie.seen == false) {
     nameList += "<li>" + movie.title + "</li>";
   } else {
     nameList +=
-      "<li style=text-decoration:line-through>" + movie.title + "</li>";
+      "<li style=text-decoration:line-through;color:#dc3545;>" +
+      movie.title +
+      "</li>";
   }
 }
 
 document.getElementById("movieList").innerHTML = nameList;
 
+// roll all
 function roll() {
   let movieArray = Object.keys(movieObj);
   let movieIndex = Math.floor(Math.random() * movieArray.length) + 1;
@@ -64,3 +68,43 @@ function roll() {
     document.getElementById("movieName").style = "text-decoration: none";
   }
 }
+
+// roll only
+function rollOnly() {
+  const seenMovies = movieObj.filter((movie) => movie.seen == false);
+  let movieIndexOnly = Math.floor(Math.random() * seenMovies.length) + 1;
+  document.getElementById("numberUnseen").innerHTML = movieIndexOnly;
+  document.getElementById("movieName").innerHTML =
+    seenMovies[movieIndexOnly].title;
+  document.getElementById("movieName").style = "text-decoration: none";
+}
+
+for (let movie of movieObj) {
+  if (movie.seen == false) {
+    unseenNamelist += "<li>" + movie.title + "</li>";
+  }
+}
+document.getElementById("movieListUnseen").innerHTML = unseenNamelist;
+
+// toggle logic
+
+document.addEventListener("DOMContentLoaded", function () {
+  var checkbox = document.querySelector('input[type="checkbox"]');
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      document.getElementById("randomAll").style = "display: none";
+      document.getElementById("unseenOnly").style = "display: block";
+      document.getElementById("movieList").style = "display: none";
+      document.getElementById("movieListUnseen").style = "display: block";
+
+      console.log("Checked");
+    } else {
+      document.getElementById("randomAll").style = "display: block";
+      document.getElementById("unseenOnly").style = "display: none";
+      document.getElementById("movieList").style = "display: block";
+      document.getElementById("movieListUnseen").style = "display: none";
+      console.log("Not checked");
+    }
+  });
+});

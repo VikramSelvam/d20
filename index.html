@@ -24,15 +24,26 @@
 </nav>
 
 <div id="mySidePanel" class="sidePanel">
+  <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+    <label class="custom-control-label" for="customSwitch1"><p>Unseen movies only</p></label>
+  </div>
   <ol id="movieList"></ol>
+  <ol id="movieListUnseen"></ol>
 </div>
 
 
 
       <div id="page-content-wrapper">
-        <div class="mx-auto dice">
+        <div id="randomAll" class="mx-auto dice">
           <h1 id="number">0</h1>
           <button onclick="roll()" type="button" class="btn btn-danger">
+            Roll
+          </button>
+        </div>
+        <div id="unseenOnly" class="mx-auto dice">
+          <h1 id="numberUnseen">0</h1>
+          <button onclick="rollOnly()" type="button" class="btn btn-danger">
             Roll
           </button>
         </div>
