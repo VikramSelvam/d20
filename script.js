@@ -36,12 +36,19 @@ function closeNav() {
 function toggleNav() {
   nav ? closeNav() : openNav();
 }
-// List Array
+// List objects
 
 let nameList = "";
-for (i = 0; i < movieObj.length; i++) {
-  nameList += "<li>" + movieObj[i].title + "</li>";
+
+for (let movie of movieObj) {
+  if (movie.seen == false) {
+    nameList += "<li>" + movie.title + "</li>";
+  } else {
+    nameList +=
+      "<li style=text-decoration:line-through>" + movie.title + "</li>";
+  }
 }
+
 document.getElementById("movieList").innerHTML = nameList;
 
 function roll() {
