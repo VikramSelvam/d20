@@ -72,8 +72,8 @@ function roll() {
 // roll only
 function rollOnly() {
   const seenMovies = movieObj.filter((movie) => movie.seen == false);
-  let movieIndexOnly = Math.floor(Math.random() * seenMovies.length) + 1;
-  document.getElementById("numberUnseen").innerHTML = movieIndexOnly;
+  let movieIndexOnly = Math.floor(Math.random() * seenMovies.length);
+  document.getElementById("numberUnseen").innerHTML = movieIndexOnly + 1;
   document.getElementById("movieName").innerHTML =
     seenMovies[movieIndexOnly].title;
   document.getElementById("movieName").style = "text-decoration: none";
