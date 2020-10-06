@@ -52,9 +52,9 @@ for (let movie of movieObj) {
 document.getElementById("movieList").innerHTML = nameList;
 
 function roll() {
-  var movieArray = Object.keys(movieObj);
-  var movieIndex = Math.floor(Math.random() * movieArray.length) + 1;
-  var randomKey = movieArray[movieIndex - 1];
+  let movieArray = Object.keys(movieObj);
+  let movieIndex = Math.floor(Math.random() * movieArray.length) + 1;
+  let randomKey = movieArray[movieIndex - 1];
   document.getElementById("number").innerHTML = movieIndex;
   document.getElementById("movieName").innerHTML = movieObj[randomKey].title;
   if (movieObj[randomKey].seen == true) {
