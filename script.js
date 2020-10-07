@@ -17,7 +17,7 @@ let movieObj = [
   { title: `Kung Fu Hustle`, seen: true },
   { title: `Dope`, seen: true },
   { title: `Space Jam`, seen: false },
-  { title: `Deadpool 2`, seen: false },
+  { title: `Deadpool 2`, seen: true },
   { title: `Lupin the 3rd`, seen: true },
   { title: `Selfless`, seen: false },
   { title: `Monty Python Life of Brian`, seen: false },
